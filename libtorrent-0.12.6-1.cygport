@@ -1,0 +1,10 @@
+DESCRIPTION="C++ BitTorrent library"
+HOMEPAGE="http://libtorrent.rakshasa.no/"
+SRC_URI="http://libtorrent.rakshasa.no/downloads/${P}.tar.gz"
+PATCH_URI="0.12.6-no-undefined.patch"
+
+PKG_NAMES="${PN} libtorrent11 libtorrent-devel"
+libtorrent11_CONTENTS="usr/bin/cygtorrent-11.dll"
+libtorrent_devel_CONTENTS="usr/include/ usr/lib/ usr/share/"
+
+CYGCONF_ARGS="--disable-mincore cc_cv_attribute_visibility=no"
